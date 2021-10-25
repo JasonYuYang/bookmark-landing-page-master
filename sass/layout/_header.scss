@@ -49,7 +49,7 @@
       display: none;
 
       &:checked ~ .header_hamburger--img::before {
-        content: url('../../images/icon-close.svg');
+        content: url('/bookmark-landing-page-master/images/icon-close.svg');
       }
       &:checked ~ .header_hamburger--background {
         opacity: 1;
@@ -57,7 +57,7 @@
       }
     }
     &--img::before {
-      content: url('../../images/icon-hamburger.svg');
+      content: url('/bookmark-landing-page-master/images/icon-hamburger.svg');
       z-index: 2000;
       cursor: pointer;
       position: relative;

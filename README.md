@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./finished/desktop.png)
+![Desktop-view](./finished/desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site of the challenge hosted here](https://jasonyang840723.
+  github.io/bookmark-landing-page-master/)
 
 ## My process
 

@@ -85,12 +85,12 @@ button {
     .header_hamburger--checkbox {
       display: none; }
       .header_hamburger--checkbox:checked ~ .header_hamburger--img::before {
-        content: url("../../images/icon-close.svg"); }
+        content: url("/bookmark-landing-page-master/images/icon-close.svg"); }
       .header_hamburger--checkbox:checked ~ .header_hamburger--background {
         opacity: 1;
         transform: scale(100); }
     .header_hamburger--img::before {
-      content: url("../../images/icon-hamburger.svg");
+      content: url("/bookmark-landing-page-master/images/icon-hamburger.svg");
       z-index: 2000;
       cursor: pointer;
       position: relative; }
