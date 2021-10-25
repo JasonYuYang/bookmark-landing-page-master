@@ -1,0 +1,13 @@
+@function base-font-size($pixels) {
+  @return percentage($pixels / 16px);
+}
+
+@function convert-rem($px) {
+  $value: #{$px / 16}rem;
+  @return $value;
+}
+
+@function resizer($min, $pref, $max) {
+  $size: clamp(#{convert-rem($min)}, #{$pref}, #{convert-rem($max)});
+  @return $size;
+}

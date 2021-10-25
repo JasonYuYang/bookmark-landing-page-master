@@ -1,0 +1,71 @@
+footer {
+  background-color: $very-dark-blue;
+}
+.footer {
+  max-width: 100rem;
+  padding: 2rem 10.25rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  @include respondMin(800px) {
+    padding: 2rem 10.25rem 2rem clamp(6.25rem, 2vw, 10.25rem);
+  }
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &_logo {
+    @media only screen and (max-width: 800px) {
+      margin-bottom: 2rem;
+    }
+  }
+  &_nav {
+    flex: 1;
+    .footer_links {
+      display: flex;
+      @media only screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      & li:last-of-type {
+        margin-right: 5rem;
+        @media only screen and (max-width: 800px) {
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+      }
+      .footer_link {
+        margin-left: clamp(2rem, 2vw, 3rem);
+        @media only screen and (max-width: 800px) {
+          margin-left: 0;
+          margin-bottom: 1rem;
+        }
+        & a {
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 0.8125rem;
+          transition: color 0.3s ease;
+          &:hover {
+            color: $soft-red;
+          }
+        }
+      }
+    }
+  }
+  .social_links {
+    display: flex;
+    align-items: flex-end;
+    @media only screen and (max-width: 800px) {
+      align-items: center;
+      margin-right: 2.5rem;
+    }
+    & a {
+      transition: all 0.3s ease;
+      margin-left: 2.5rem;
+      & svg path:hover {
+        fill: $soft-red;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: $soft-blue;
+    width: 100%;
+    height: resizer(140, 25vw, 320);
+    left: 65%;
+    top: resizer(160, 20vw, 240);
+    border-bottom-left-radius: 10.75rem;
+    border-top-left-radius: 10.75rem;
+    z-index: -1;
+    @media only screen and (max-width: 800px) {
+      left: 20%;
+      top: resizer(120, 26vw, 240);
+      height: resizer(140, 50vw, 320);
+    }
+  }
+  .hero-wrapper {
+    display: flex;
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      padding: resizer(80, 10vw, 114) resizer(32, 10vw, 92)
+        resizer(96, 10vw, 148) resizer(32, 10vw, 92);
+    }
+    position: relative;
+    padding: resizer(80, 10vw, 114) convert-rem(92) convert-rem(175)
+      resizer(32, 12.2vw, 164);
+    @include respondMin(800px) {
+      padding: clamp(5rem, 10vw, 7.125rem) clamp(2rem, 6.8vw, 5.75rem)
+        11.8125rem clamp(2rem, 12.2vw, 10.25rem);
+    }
+    margin: auto;
+    max-width: 100rem;
+  }
+  &_content {
+    flex: 0 1 50%;
+    @media only screen and (max-width: 800px) {
+      flex: 0 0 100%;
+      order: 2;
+      padding: 0 1rem;
+      text-align: center;
+      margin-top: 5.75rem;
+    }
+    margin-top: resizer(8, 5vw, 68);
+    padding: 0 resizer(0, 5vw, 83.2) 0 0;
+    text-align: left;
+  }
+  &_img {
+    flex: 0 1 50%;
+    @media only screen and (max-width: 800px) {
+      order: 1;
+    }
+  }
+  &_title {
+    font-size: resizer(32, 4.5vw, 48);
+    color: $very-dark-blue;
+    font-weight: 500;
+    line-height: 1.08em;
+  }
+  &_text {
+    margin-top: resizer(20, 2vw, 24);
+    color: $grayish-blue;
+    font-size: resizer(15, 1.5vw, 18);
+    line-height: 1.55;
+  }
+  &_btn {
+    margin: convert-rem(35) 0 0;
+    max-width: 21.5rem;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 800px) {
+      margin: convert-rem(35) auto 0;
+      flex-direction: column;
+      padding: 1rem 2rem;
+      width: max-content;
+
+      & button:first-child {
+        margin-bottom: 1rem;
+        box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+      }
+    }
+    &--item {
+      padding: resizer(11, 1vw, 13) resizer(13, 2vw, 22);
+    }
+  }
+}

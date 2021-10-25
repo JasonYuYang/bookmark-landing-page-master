@@ -1,0 +1,10 @@
+@mixin respondMax($breakpoint) {
+  @media only screen and (max-wdith: $breakpoint / 16px * 1em) {
+    @content;
+  }
+}
+@mixin respondMin($breakpoint) {
+  @media only screen and (min-width: $breakpoint / 16px * 1em) {
+    @content;
+  }
+}

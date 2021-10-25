@@ -1,0 +1,73 @@
+.faq {
+  margin: 0 auto;
+  max-width: 33.625rem;
+  padding: 0 0 9.3125rem;
+  @media only screen and (max-width: 800px) {
+    padding: 2rem;
+  }
+  &_header {
+    &_title {
+      color: $very-dark-blue;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      @media only screen and (max-width: 800px) {
+        font-size: convert-rem(25);
+      }
+    }
+    &_text {
+      margin: 1.625rem 0 2.25rem;
+      color: $grayish-blue;
+      font-size: resizer(15, 1.5vw, 18);
+      line-height: 1.55;
+      text-align: center;
+    }
+  }
+  &_contents {
+    padding-top: 1.4375rem;
+  }
+  &_question {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &:first-of-type {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    & svg {
+      transition: transform 0.3s ease;
+      path {
+        transition: stroke 0.3s ease;
+      }
+    }
+    &[open] svg {
+      transform: rotate(-180deg);
+      path {
+        stroke: $soft-red;
+      }
+    }
+    summary {
+      color: $very-dark-blue;
+      cursor: pointer;
+      display: flex;
+      font-size: resizer(15, 1.5vw, 18);
+      justify-content: space-between;
+      list-style: none;
+      padding: 1.6875rem 0 1.1875rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+    .faq_answer {
+      color: $grayish-blue;
+      font-size: resizer(15, 1.5vw, 18);
+      line-height: 2;
+      padding: 1.25rem 0 2.125rem;
+    }
+  }
+  &_btn {
+    text-decoration: none;
+    padding: 0.8125rem 1.375rem;
+    margin: 3.375rem 0 0 50%;
+    transform: translateX(-50%);
+  }
+}

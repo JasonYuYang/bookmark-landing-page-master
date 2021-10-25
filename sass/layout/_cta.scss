@@ -1,0 +1,115 @@
+.cta {
+  background-color: $soft-blue;
+  max-width: 100%;
+  &_container {
+    margin: 0 auto;
+    max-width: 31rem;
+    padding: 4.375rem 2rem 4.5rem;
+  }
+  &_contents {
+    color: #fff;
+    text-align: center;
+    span {
+      display: block;
+      font-size: 0.8125rem;
+      letter-spacing: 0.35em;
+      margin-bottom: 2.375rem;
+      text-transform: uppercase;
+    }
+  }
+  &_heading {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2.25rem;
+    @media only screen and (max-width: 800px) {
+      font-size: 1.75rem;
+    }
+  }
+  &_form {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    color: #fff;
+    text-align: center;
+    justify-content: space-between;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .form_container {
+      flex: 0 1 18.875rem;
+      position: relative;
+      @media only screen and (max-width: 600px) {
+        flex: 0 1 4rem;
+        width: 100%;
+      }
+    }
+
+    input {
+      position: relative;
+      background-color: #fff;
+      border-radius: 0.25rem;
+      color: #252b46;
+      font-size: 0.875rem;
+      padding: 1rem 2.75rem 1rem 1.25rem;
+      border: none;
+      width: 100%;
+      z-index: 10;
+      &[data-valid='false'] {
+        background: url('../../images/icon-error.svg') no-repeat 95% center;
+        background-color: #ffffff;
+        border: solid 3px $soft-red;
+        margin-bottom: convert-rem(45);
+      }
+      &[data-valid='false'] + .form_error {
+        align-items: flex-end;
+        display: flex;
+      }
+      &:focus,
+      &:active {
+        outline: 3px dashed #fff;
+        outline-offset: 3px;
+      }
+    }
+    .form_submit {
+      padding: 0.85rem 1.25rem;
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    .form_error {
+      border-radius: 0.25rem;
+      background-color: $soft-red;
+      bottom: 21px;
+      color: #ffffff;
+      font-size: convert-rem(10);
+      font-style: italic;
+      left: 0;
+      letter-spacing: 0.1em;
+      padding: convert-rem(4) convert-rem(18) convert-rem(6);
+      position: absolute;
+      text-align: left;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .toast {
+    background-color: #8673f4;
+    border-radius: 0 10.75rem 10.75rem 0;
+    color: #fff;
+    font-size: 1.2rem;
+    left: -20rem;
+    padding: 2.5rem 1rem 2.5rem 0.25rem;
+    position: fixed;
+    top: 2rem;
+    text-align: center;
+    -webkit-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    width: 20rem;
+    z-index: 20;
+    &.show {
+      left: 0;
+    }
+  }
+}
