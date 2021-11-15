@@ -32,8 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live site of the challenge hosted here](https://jasonyang840723.
-  github.io/bookmark-landing-page-master/)
+- Live Site URL: [Live site of the challenge hosted here](https://jasonyang840723.github.io/bookmark-landing-page-master/)
 
 ## My process
 
